@@ -1,6 +1,12 @@
 import "./Navbar.css";
 
+
+import {} from 'react-router-dom'
+
 const Navbar = () => {
+
+
+
   return(
     <div className="navbar">
       <img 
@@ -8,7 +14,7 @@ const Navbar = () => {
       alt="logo"
       className="logo"
       />
-      <nav>
+      <nav className="options">
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/venues">Venues</a>

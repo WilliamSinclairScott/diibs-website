@@ -1,6 +1,5 @@
 import './Footer.css';
 
-import {useEffect} from 'react';
 const Footer = () => {
 
   const handleSubmit = (event: any) => {
@@ -14,7 +13,7 @@ const Footer = () => {
   return(
     <div className="footer">
       Contact Us
-      <form onSubmit={e => handleSubmit(e)}>
+      <form onSubmit={handleSubmit}>
         <label>
           First and Last name:
           <input type="text" name="name" />

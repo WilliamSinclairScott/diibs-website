@@ -7,6 +7,9 @@
   color: rgba(0, 0, 0, 0.87);
   background-color: #FDF0E6;
 
+  display: flex;
+  place-items: center;
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
