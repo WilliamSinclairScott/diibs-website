@@ -47,7 +47,7 @@ const VenuesPage = () => {
 
   const { venues, tags } = useLoaderData() as VenueData;
   
-  const [filterOptions] = useState<string[]>(() =>
+  const [_filterOptions] = useState<string[]>(() =>
     Array.from(new Set([...tags, "NYC", "Hamptons"]))
   );
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
@@ -80,7 +80,7 @@ const VenuesPage = () => {
           Filter:
         </Text>
         <Flex wrap="wrap" gap="2" mb="2">
-          {filterOptions.map((option) => (
+          {_filterOptions.map((option) => (
             <Flex key={option} align="center">
               <Checkbox
                 checked={selectedFilters.includes(option)}
