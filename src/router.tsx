@@ -1,11 +1,7 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { styled } from "./stitches.config";
-import { Outlet } from "react-router-dom";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Venues from "./pages/Venues";
@@ -24,9 +20,7 @@ const MainContent = styled("main", {
   flexDirection: "column",
 });
 
-
 const PageWrapper = () => {
-
   return (
     <PageContainer>
       <Navbar />
