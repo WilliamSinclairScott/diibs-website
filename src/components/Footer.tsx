@@ -28,7 +28,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <Logo 
-        src="https://images.squarespace-cdn.com/content/v1/661043c4a62d407aa7d2daf8/39204b38-a4ce-4095-ab46-7cec4e8cc5d7/DIIBS_logo_black.png?format=1500w" 
+        src="DIIBS_logo_black.png" 
         alt="logo"
       />
       <InstagramLink href="https://www.instagram.com/got_diibs/" target="_blank" rel="noopener noreferrer">

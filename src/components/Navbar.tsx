@@ -1,5 +1,7 @@
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+import { HamburgerMenuIcon } from '@radix-ui/react-icons';
+import { Link } from 'react-router-dom';
 import { styled } from '../stitches.config';
 import { useState, useEffect } from 'react';
 
@@ -52,6 +54,9 @@ const StyledDropdownContent = styled(DropdownMenu.Content, {
   borderRadius: '4px',
   boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
   padding: '0.5rem',
+  margin: '0.5rem',
+  zIndex: '10',
+  border: '1px solid $black',
 });
 
 const StyledDropdownItem = styled(DropdownMenu.Item, {
@@ -89,10 +94,12 @@ const Navbar = () => {
 
   return (
     <StyledNav>
-      <Logo 
-        src="https://images.squarespace-cdn.com/content/v1/661043c4a62d407aa7d2daf8/39204b38-a4ce-4095-ab46-7cec4e8cc5d7/DIIBS_logo_black.png?format=1500w" 
-        alt="logo"
-      />
+      <Link to="/">
+        <Logo 
+          src="DIIBS_logo_black.png" 
+          alt="logo"
+        />
+      </Link>
       {!isMobile ? (
         <NavigationMenu.List asChild>
           <StyledList>
@@ -106,7 +113,9 @@ const Navbar = () => {
       ) : (
         <DropdownMenu.Root>
           <DropdownMenu.Trigger asChild>
-            <MenuButton>☰</MenuButton>
+            <MenuButton>
+              <HamburgerMenuIcon />
+            </MenuButton>
           </DropdownMenu.Trigger>
           <StyledDropdownContent>
             {navItems.map((item) => (
