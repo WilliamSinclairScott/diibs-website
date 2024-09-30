@@ -32,12 +32,8 @@ const VenueCard = styled(Card, {
 
 const VenuesPage = () => {
   const { venues, tags } = useLoaderData() as VenueData;
-  const [filterOptions, setFilterOptions] = useState<string[]>([]);
+  const [filterOptions] = useState<string[]>(() => Array.from(new Set([...tags, "NYC", "Hamptons"])));
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
-
-  useEffect(() => {
-    setFilterOptions(Array.from(new Set([...tags, "NYC", "Hamptons"])));
-  }, [tags]);
 
   const filteredVenues = venues.filter(venue => 
     selectedFilters.length === 0 || 
