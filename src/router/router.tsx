@@ -7,6 +7,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Venues from "../pages/Venues";
 import Faq from "../pages/Faq";
+import { fetchVenues } from "../services/venueService";
 
 const PageContainer = styled('div', {
   display: 'flex',
@@ -45,7 +46,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/venues",
-        element: <Venues />
+        element: <Venues />,
+        loader: fetchVenues
       },
       {
         path: "/faq",
