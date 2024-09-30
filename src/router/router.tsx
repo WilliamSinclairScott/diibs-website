@@ -1,19 +1,33 @@
-import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { styled } from '../stitches.config';
+import { Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Venues from "../pages/Venues";
+import Faq from "../pages/Faq";
 
-import Home from "../pages/Home/Home";
-import About from "../pages/About/About";
-import Venues from "../pages/Venues/Venues";
-import Faq from "../pages/Faq/Faq";
+const PageContainer = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  minHeight: '100vh',
+});
 
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+const MainContent = styled('main', {
+  flexGrow: 1,
+  display: 'flex',
+  flexDirection: 'column',
+});
 
 const PageWrapper = () => (
-  <>
+  <PageContainer>
     <Navbar />
-    <Outlet />
+    <MainContent>
+      <Outlet />
+    </MainContent>
     <Footer />
-  </>
+  </PageContainer>
 );
 
 const router = createBrowserRouter([

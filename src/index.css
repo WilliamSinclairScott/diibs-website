@@ -1,71 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&family=Overpass:wght@300;400;700&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Primary Colors */
+  --color-black: #1B2123;
+  --color-off-white: #F3F3F3;
 
-  color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #FDF0E6;
+  /* Accent Colors */
+  --color-orange: #FFC66C;
+  --color-green: #9BB99C;
 
-  display: flex;
-  place-items: center;
-  
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Grays */
+  --color-gray-blue: #6E858E;
+  --color-medium-gray: #C2CACE;
+  --color-light-gray: #E4E8F0;
+  --color-white: #FBFBFF;
+
+  /* Font Sizes */
+  --font-size-h1: 40px;
+  --font-size-h2: 30px;
+  --font-size-h3: 24px;
+  --font-size-h4: 20px;
+  --font-size-body: 17px;
+  --font-size-info-labels: 17px;
+  --font-size-tags: 14px;
+
+  /* Line Heights */
+  --line-height-default: 1.5;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  line-height: var(--line-height-default);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-black);
+  background-color: var(--color-off-white);
+  margin: 0;
+  padding: 0;
+}
+
+h1, .h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+}
+
+h2, .h2 {
+  font-family: 'Overpass', sans-serif;
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+}
+
+h3, .h3 {
+  font-family: 'Overpass', sans-serif;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+}
+
+h4, .h4 {
+  font-family: 'Overpass', sans-serif;
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-medium);
+}
+
+.body-text {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+}
+
+.info-labels {
+  font-size: var(--font-size-info-labels);
+  font-weight: var(--font-weight-bold);
+}
+
+.tags {
+  font-size: var(--font-size-tags);
+  font-weight: var(--font-weight-light);
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: var(--color-black);
+  text-decoration: none;
 }
+
 a:hover {
-  color: #535bf2;
-}
-/* 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  text-decoration: underline;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.primary-button {
+  background-color: var(--color-orange);
+  color: var(--color-black);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-family: 'Overpass', sans-serif;
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+.secondary-button {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-family: 'Overpass', sans-serif;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+
+.inline-button {
+  background: none;
+  border: none;
+  color: var(--color-black);
+  font-family: 'Overpass', sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+/* You may want to add more specific styles for your app layout here */
