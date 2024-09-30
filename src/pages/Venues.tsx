@@ -44,12 +44,10 @@ const VenueCard = styled(Card, {
 });
 
 const VenuesPage = () => {
-
   const { venues, tags } = useLoaderData() as VenueData;
-  
-  const [_filterOptions] = useState<string[]>(() =>
-    Array.from(new Set([...tags, "NYC", "Hamptons"]))
-  );
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_filterOptions] = useState<string[]>(() => Array.from(new Set([...tags, "NYC", "Hamptons"])));
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
   const filteredVenues = venues.filter(
     (venue) =>
